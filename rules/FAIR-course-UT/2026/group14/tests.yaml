@@ -1,15 +1,15 @@
 tests:
-  - name: "Ontology redirect"
-    url: "https://w3id.org/FAIR-course-UT/2026/group14/ont"
-    expected_status: 302
-    expected_location: "https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/ontology/ontology.ttl"
+  - pid: https://w3id.org/FAIR-course-UT/2026/group14/ont
+    note: Ontology redirect
+    status: 302
+    location: https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/ontology/ontology.ttl
 
-  - name: "FAIRified RDF Data redirect"
-    url: "https://w3id.org/FAIR-course-UT/2026/group14/data"
-    expected_status: 302
-    expected_location: "https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/data/fairified-earthquakes.ttl"
+  - pid: https://w3id.org/FAIR-course-UT/2026/group14/data
+    note: FAIRified RDF data redirect
+    status: 302
+    location: https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/data/fairified-earthquakes.ttl
 
-  - name: "Original CSV Data redirect"
-    url: "https://w3id.org/FAIR-course-UT/2026/group14/csv"
-    expected_status: 302
-    expected_location: "https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/data/earthquakes.csv"
+  - pid: https://w3id.org/FAIR-course-UT/2026/group14/csv
+    note: Original CSV data redirect
+    status: 302
+    location: https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/data/earthquakes.csv
