@@ -1,0 +1,14 @@
+tests:
+  - pid: https://w3id.org/FAIR-course-UT/2026/group05/dataset/rivers
+    accept: text/turtle
+    status: 303
+    location: https://example.org/data/rivers.ttl
+
+  - path: dataset/rivers            # same thing, relative to your namespace
+    accept: text/html
+    status: 303
+    location: https://example.org/data/rivers.html
+
+  - path: dataset/Not_Valid
+    note: names with capitals are not identifiers   # shown in reports
+    status: 404
