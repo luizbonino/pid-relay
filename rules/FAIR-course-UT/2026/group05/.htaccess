@@ -1,12 +1,14 @@
 RewriteEngine on
 
-# Turtle for clients that ask for it
+# Ontology
 RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule ^dataset/([a-z0-9-]+)$ https://example.org/data/$1.ttl [R=303,L]
+RewriteRule ^ont$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/ontology/shelter_dogs_ont.ttl [R=303,L]
 
-# JSON-LD
-RewriteCond %{HTTP_ACCEPT} application/ld\+json
-RewriteRule ^dataset/([a-z0-9-]+)$ https://example.org/data/$1.jsonld [R=303,L]
+# FAIRified data
+RewriteRule ^data$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_fair.ttl [R=303,L]
 
-# Everyone else (browsers) gets the HTML page
-RewriteRule ^dataset/([a-z0-9-]+)$ https://example.org/data/$1.html [R=303,L]
+# Original data
+RewriteRule ^data/original$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_original.csv [R=303,L]
+
+# Project page
+RewriteRule ^$ https://gitlab.utwente.nl/s2987716/fair-project [R=302,L]
