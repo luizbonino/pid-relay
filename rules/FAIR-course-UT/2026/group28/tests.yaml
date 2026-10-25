@@ -24,12 +24,12 @@ tests:
   - pid: https://w3id.org/FAIR-course-UT/2026/group28/data
     accept: text/turtle
     status: 303
-    location: https://raw.githubusercontent.com/varshavasaraju/Dutch-Electricity-Fair-Data/main/Dutch_Electricity_fair_project/rdf/coteq_electricity_2013.ttl
+    location: https://raw.githubusercontent.com/varshavasaraju/Dutch-Electricity-Fair-Data/main/Dutch_Electricity_fair_project/rdf/coteq_electricity_2013_csv (1).ttl
 
   - pid: https://w3id.org/FAIR-course-UT/2026/group28/data
     accept: text/html,application/xhtml+xml
     status: 303
-    location: https://raw.githubusercontent.com/varshavasaraju/Dutch-Electricity-Fair-Data/main/Dutch_Electricity_fair_project/rdf/coteq_electricity_2013.ttl
+    location: https://raw.githubusercontent.com/varshavasaraju/Dutch-Electricity-Fair-Data/main/Dutch_Electricity_fair_project/rdf/coteq_electricity_2013_csv (1).ttl
 
   # Original CSV
   - path: data/original
