@@ -1,0 +1,74 @@
+tests:
+  - pid: https://w3id.org/FAIR-course-UT/2026/group28/ont
+    accept: application/rdf+xml
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/raw/main/ontology/dutch_electricity_ontology.owx
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group28/ont
+    accept: text/html,application/xhtml+xml
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/ontology/dutch_electricity_ontology.owx
+
+  - path: ont/1.0.0
+    accept: application/rdf+xml
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/raw/main/ontology/dutch_electricity_ontology.owx
+
+  - path: ont/1.0.0
+    accept: text/html
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/ontology/dutch_electricity_ontology.owx
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group28/data
+    accept: text/turtle
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/raw/main/rdf/coteq_electricity_2013_csv%20(1).ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group28/data
+    accept: text/html,application/xhtml+xml
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/rdf/coteq_electricity_2013_csv%20(1).ttl
+
+  - path: data/original
+    accept: text/csv
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/raw/main/data/raw/coteq_electricity_2013.csv
+
+  - path: data/original
+    accept: text/html
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/data/raw/coteq_electricity_2013.csv
+
+  - path: data/clean
+    accept: text/csv
+    status: 404
+
+  - path: data/clean
+    accept: text/html
+    status: 404
+
+  - path: metadata
+    accept: text/turtle
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/raw/main/reports/dataset_metadata.ttl
+
+  - path: metadata
+    accept: text/html
+    status: 303
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/reports/dataset_metadata.ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group28/
+    status: 302
+    location: https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28
+
+  - path: ontology
+    status: 404
+
+  - path: data/originals
+    status: 404
+
+  - path: data/cleaned
+    status: 404
+
+  - path: metadata/dataset
+    status: 404
