@@ -1,15 +1,20 @@
-# Birdsoftheworld-fairified dataset, Canvas Group 11.
+# Birdsoftheworld-fairified dataset: https://w3id.org/FAIR-course-UT/2026/group11/...
 RewriteEngine on
 
+# Ontology identifier resolves to the ontology document.
 RewriteRule ^ont/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/ontology/ontology.ttl [R=303,L]
 
+# Data downloads: fairified RDF and the original CSV, independent of Accept.
 RewriteRule ^data/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/data/birdsoftheworld-fairified.ttl [R=303,L]
 RewriteRule ^original\.csv$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/preprocessing/Birdsoftheworld.csv [R=303,L]
+
+# Public metadata descriptions for the catalog, dataset and distributions.
 RewriteRule ^metadata/catalog/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/metadata/catalog.ttl [R=303,L]
 RewriteRule ^metadata/dataset/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/metadata/dataset.ttl [R=303,L]
 RewriteRule ^metadata/distribution-original/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/metadata/distribution-original.ttl [R=303,L]
 RewriteRule ^metadata/distribution-fairified/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/metadata/distribution-fairified.ttl [R=303,L]
 
+# SHACL shapes for validating the metadata descriptions.
 RewriteRule ^schema/catalog/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/metadata/catalog-shape.ttl [R=303,L]
 RewriteRule ^schema/dataset/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/metadata/dataset-shape.ttl [R=303,L]
 RewriteRule ^schema/distribution/?$ https://raw.githubusercontent.com/wouter-deen/birdsoftheworld-dataset-fairification/main/metadata/distribution-shape.ttl [R=303,L]
