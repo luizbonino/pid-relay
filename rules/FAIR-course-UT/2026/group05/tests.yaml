@@ -2,7 +2,7 @@ tests:
   - pid: https://w3id.org/FAIR-course-UT/2026/group05/ont
     accept: text/turtle
     status: 303
-    location: https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/ont/shelter_dogs_ont.ttl
+    location: https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/ontology/shelter_dogs_ont.ttl
 
   - pid: https://w3id.org/FAIR-course-UT/2026/group05/data
     accept: text/turtle
@@ -10,9 +10,9 @@ tests:
     location: https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_fair.ttl
 
   - pid: https://w3id.org/FAIR-course-UT/2026/group05/data/original
-    accept: text/turtle
+    accept: text/csv
     status: 303
-    location: https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_original.ttl
+    location: https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_original.csv
 
   - path: ""
     accept: text/html

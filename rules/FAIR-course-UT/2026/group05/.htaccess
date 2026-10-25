@@ -11,4 +11,4 @@ RewriteRule ^data$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/da
 RewriteRule ^data/original$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_original.csv [R=303,L]
 
 # Project page
-RewriteRule ^$ https://gitlab.utwente.nl/s2987716/fair-project [R=302,L]
+RewriteRule ^$ https://gitlab.utwente.nl/s2987716/fair-project [R=303,L]
