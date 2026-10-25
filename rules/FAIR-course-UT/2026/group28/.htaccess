@@ -1,31 +1,21 @@
-# Redirect rules for https://w3id.org/FAIR-course-UT/2026/group23/
-# Group 23, FAIR Data Engineering, University of Twente
-# Maintainers: Prutha Vijaykumar Thakkar (prutha9603) and Rattan Kumar (Tanrat23)
-# Repository: https://github.com/Tanrat23/library-catalogue-FAIRification-group23
-#
-# Patterns are matched against the text after the namespace, without a leading slash.
-# Every target is a raw file on branch main of the repository above.
-# Check each path after /main/ against the real folders before opening the pull request.
-
 RewriteEngine on
 
-# The namespace root goes to the project page.
-RewriteRule ^$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23 [R=302,L]
+Header always append Vary Accept
 
-# The ontology (terms are ont#Term; the part after # never reaches the server).
-RewriteRule ^ont/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23/raw/main/ontology/library-ontology.ttl [R=302,L]
+# Ontology
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule ^ont(/1\.0\.0)?$ https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/ontology/dutch_electricity_ontology.owx [R=303,L]
+RewriteRule ^ont(/1\.0\.0)?$ https://raw.githubusercontent.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/main/ontology/dutch_electricity_ontology.owx [R=303,L]
 
-# The RDF data (record IRIs are data#book-A1-B1-0001).
-RewriteRule ^data/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23/raw/main/data/rdf/library.ttl [R=302,L]
+# FAIRified RDF data
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule ^data$ https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/rdf/coteq_electricity_2013_csv%20(1).ttl [R=303,L]
+RewriteRule ^data$ https://raw.githubusercontent.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/main/rdf/coteq_electricity_2013_csv%20(1).ttl [R=303,L]
 
-# The dataset itself goes to the project page. 303 because it names a thing, not a document.
-RewriteRule ^dataset/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23 [R=303,L]
+# Original CSV data
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule ^data/original$ https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/blob/main/data/raw/coteq_electricity_2013.csv [R=303,L]
+RewriteRule ^data/original$ https://raw.githubusercontent.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28/main/data/raw/coteq_electricity_2013.csv [R=303,L]
 
-# The two distributions (downloadURL in the FAIR Data Point points here).
-RewriteRule ^distribution/original-csv/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23/raw/main/data/library_catalogue_original.csv [R=302,L]
-RewriteRule ^distribution/ttl/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23/raw/main/data/rdf/library.ttl [R=302,L]
-
-# SHACL shapes (optional: they make the quality gates citable).
-RewriteRule ^shapes/dataset/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23/raw/main/shapes/dataset-shape.ttl [R=302,L]
-RewriteRule ^shapes/distribution/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23/raw/main/shapes/distribution-shape.ttl [R=302,L]
-RewriteRule ^shapes/book/?$ https://github.com/Tanrat23/library-catalogue-FAIRification-group23/raw/main/shapes/book-shape.ttl [R=302,L]
+# Project repository
+RewriteRule ^$ https://github.com/vasaraju686-os/Dutch-Electricity-Consumption-Group-28 [R=302,L]
