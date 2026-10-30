@@ -3,6 +3,10 @@ RewriteEngine on
 # Ontology
 RewriteRule ^ont$ https://raw.githubusercontent.com/rishiraghavendran/FAIR-Meteorites-group1/main/ontology/Meteorite_Ontology.owl [R=302,L]
 
+# Project repository
+RewriteRule ^$ https://github.com/rishiraghavendran/FAIR-Meteorites-group1 [R=302,L]
+RewriteRule ^repo$ https://github.com/rishiraghavendran/FAIR-Meteorites-group1 [R=302,L]
+
 # Data distributions
 RewriteRule ^data$ https://raw.githubusercontent.com/rishiraghavendran/FAIR-Meteorites-group1/main/rdf/Meteorite_Falls_RDF.ttl [R=302,L]
 RewriteRule ^data/rdf$ https://raw.githubusercontent.com/rishiraghavendran/FAIR-Meteorites-group1/main/rdf/Meteorite_Falls_RDF.ttl [R=302,L]
