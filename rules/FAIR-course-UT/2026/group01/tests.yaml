@@ -1,4 +1,12 @@
 tests:
+  - path: ""
+    note: the namespace leads to the project repository
+    status: 302
+    location: https://github.com/rishiraghavendran/FAIR-Meteorites-group1
+
+  - path: repo
+    status: 302
+    location: https://github.com/rishiraghavendran/FAIR-Meteorites-group1
   - path: ont
     status: 302
     location: https://raw.githubusercontent.com/rishiraghavendran/FAIR-Meteorites-group1/main/ontology/Meteorite_Ontology.owl
