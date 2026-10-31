@@ -16,6 +16,11 @@ RewriteCond %{HTTP_ACCEPT} text/turtle [NC]
 RewriteRule ^data/original$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_original.csv [R=303,L]
 RewriteRule ^data/original$ https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/data/shelter_dogs_original.csv [R=303,L]
 
+# Clean data
+RewriteCond %{HTTP_ACCEPT} text/turtle [NC]
+RewriteRule ^data/clean$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_clean.csv [R=303,L]
+RewriteRule ^data/clean$ https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/data/shelter_dogs_clean.csv [R=303,L]
+
 # Database metadata schema
 RewriteCond %{HTTP_ACCEPT} text/turtle [NC]
 RewriteRule ^metadata/schema$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/metadata/schema.ttl [R=303,L]
@@ -40,6 +45,12 @@ RewriteRule ^metadata/distribution/data$ https://gitlab.utwente.nl/s2987716/fair
 RewriteCond %{HTTP_ACCEPT} text/turtle [NC]
 RewriteRule ^metadata/distribution/original$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/metadata/distribution/original.ttl [R=303,L]
 RewriteRule ^metadata/distribution/original$ https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/metadata/distribution/original.ttl [R=303,L]
+
+
+# Clean data distribution
+RewriteCond %{HTTP_ACCEPT} text/turtle [NC]
+RewriteRule ^metadata/distribution/clean$ https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/metadata/distribution/clean.ttl [R=303,L]
+RewriteRule ^metadata/distribution/clean$ https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/metadata/distribution/clean.ttl [R=303,L]
 
 # Anything else: the landing page.
 RewriteRule ^$ https://gitlab.utwente.nl/s2987716/fair-project [R=302,L]

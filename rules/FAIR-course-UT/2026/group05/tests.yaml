@@ -26,6 +26,15 @@ tests:
     status: 303
     location: https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/data/shelter_dogs_original.csv
 
+  - path: data/clean
+    accept: text/turtle
+    status: 303
+    location: https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/data/shelter_dogs_clean.csv
+  - path: data/clean
+    accept: text/html
+    status: 303
+    location: https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/data/shelter_dogs_clean.csv
+
   - path: metadata/schema
     accept: text/turtle
     status: 303
@@ -70,6 +79,15 @@ tests:
     accept: text/html
     status: 303
     location: https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/metadata/distribution/original.ttl
+
+  - path: metadata/distribution/clean
+    accept: text/turtle
+    status: 303
+    location: https://gitlab.utwente.nl/s2987716/fair-project/-/raw/main/metadata/distribution/clean.ttl
+  - path: metadata/distribution/clean
+    accept: text/html
+    status: 303
+    location: https://gitlab.utwente.nl/s2987716/fair-project/-/blob/main/metadata/distribution/clean.ttl
 
   - path: ""
     accept: text/html
