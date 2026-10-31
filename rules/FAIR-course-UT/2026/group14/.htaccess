@@ -12,3 +12,10 @@ RewriteRule ^csv$ https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/data/ea
 
 # Default Base URL Redirect (points to repository homepage)
 RewriteRule ^$ https://github.com/OlafAdams/FAIR-Earthquakes [R=302,L]
+
+
+# Exact match for /metadata -> GitHub folder view
+RewriteRule ^metadata/?$ https://github.com/OlafAdams/FAIR-Earthquakes/tree/main/metadata [R=302,L]
+
+# Sub-paths like /metadata/dataset.ttl -> Raw file download
+RewriteRule ^metadata/(.+)$ https://github.com/OlafAdams/FAIR-Earthquakes/raw/main/metadata/$1 [R=302,L]
