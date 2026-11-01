@@ -27,3 +27,28 @@ tests:
   - path: something-else
     note: identifiers without a rule are not redirected
     status: 404
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/metadata
+    note: the dataset metadata record
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/dataset.ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/metadata/catalog
+    note: the catalog metadata record
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/catalog.ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/metadata/distribution-original
+    note: the original data distribution record
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/distribution-original.ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/metadata/distribution-rdf
+    note: the RDF distribution record
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/distribution-rdf.ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/metadata/distribution-csv
+    note: the cleaned CSV distribution record
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/distribution-csv.ttl

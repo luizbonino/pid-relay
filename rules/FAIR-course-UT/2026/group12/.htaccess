@@ -1,11 +1,25 @@
 RewriteEngine on
 
+#Ontology
 RewriteRule ^ont$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ontology-group12.ttl [R=303,L]
 
+#Data
 RewriteRule ^data$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-data.ttl [R=303,L]
 
 RewriteRule ^original$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-original-data.csv [R=303,L]
 
 RewriteRule ^csv$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-data.csv [R=303,L]
 
+#Project Repo
 RewriteRule ^$ https://gitlab.utwente.nl/s3695972/fair-project [R=302,L]
+
+#Metadata
+RewriteRule ^metadata$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/dataset.ttl [R=303,L]
+
+RewriteRule ^metadata/catalog$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/catalog.ttl [R=303,L]
+
+RewriteRule ^metadata/distribution-original$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/distribution-original.ttl [R=303,L]
+
+RewriteRule ^metadata/distribution-rdf$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/distribution-rdf.ttl [R=303,L]
+
+RewriteRule ^metadata/distribution-csv$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/metadata/distribution-csv.ttl [R=303,L]
