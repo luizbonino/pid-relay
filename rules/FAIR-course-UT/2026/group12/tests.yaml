@@ -1,0 +1,29 @@
+tests:
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/ont
+    note: the ontology document
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ontology-group12.ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/data
+    note: the FAIRified data as RDF
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-data.ttl
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/original
+    note: the original CSV from NYC Open Data
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-original-data.csv
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/csv
+    note: the cleaned data as CSV
+    status: 303
+    location: https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-data.csv
+
+  - pid: https://w3id.org/FAIR-course-UT/2026/group12/
+    note: the namespace of the project repository
+    status: 302
+    location: https://gitlab.utwente.nl/s3695972/fair-project
+
+  - path: something-else
+    note: identifiers without a rule are not redirected
+    status: 404
