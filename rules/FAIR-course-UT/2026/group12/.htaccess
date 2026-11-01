@@ -1,0 +1,11 @@
+RewriteEngine on
+
+RewriteRule ^ont$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ontology-group12.ttl [R=303,L]
+
+RewriteRule ^data$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-data.ttl [R=303,L]
+
+RewriteRule ^original$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-original-data.csv [R=303,L]
+
+RewriteRule ^csv$ https://gitlab.utwente.nl/s3695972/fair-project/-/raw/main/ev-data.csv [R=303,L]
+
+RewriteRule ^$ https://gitlab.utwente.nl/s3695972/fair-project [R=302,L]
