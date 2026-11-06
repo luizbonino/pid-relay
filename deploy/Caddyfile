@@ -18,6 +18,16 @@
 		reverse_proxy ui:8000
 	}
 
+	# ERDERA demo VP Index, a separate compose project that joins this
+	# stack's network (luizbonino/erdera-demonstrators, infra/demo-index).
+	# The client knows its path (PUBLIC_PATH=/demo-index) and gets requests
+	# without it. No redirect for the bare path: FDPs POST their ping there.
+	@demoindex path /demo-index /demo-index/*
+	handle @demoindex {
+		uri strip_prefix /demo-index
+		reverse_proxy erdera-demo-index-client:80
+	}
+
 	# Other testbed services go here, e.g.
 	# handle /fdp/* { reverse_proxy fdp:80 }
 
