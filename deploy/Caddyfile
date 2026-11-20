@@ -35,3 +35,12 @@
 		respond "fair-testbed" 404
 	}
 }
+
+# FDPneo Index, a separate compose project (luizbonino/fdpneo-index, in
+# /opt/fdpneo-index) whose client joins this stack's network with
+# deploy/compose.proxy.yaml. Its own host name, so Caddy gets a certificate
+# for it once DNS points here. Caddy sets X-Forwarded-For from the address
+# that connected, which the index's rate limits rely on.
+index.fdpneo.fairdatapoint.org {
+	reverse_proxy fdpneo-index-client:80
+}
