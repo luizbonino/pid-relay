@@ -42,5 +42,8 @@
 # for it once DNS points here. Caddy sets X-Forwarded-For from the address
 # that connected, which the index's rate limits rely on.
 index.fdpneo.fairdatapoint.org {
+	# HTTPS only in browsers for a year; this host alone (no includeSubDomains,
+	# no preload), so other fairdatapoint.org hosts are not affected.
+	header Strict-Transport-Security "max-age=31536000"
 	reverse_proxy fdpneo-index-client:80
 }
